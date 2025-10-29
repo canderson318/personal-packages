@@ -3,3 +3,4 @@
 export(how.long)
 export(memory_usage_summary)
 export(notify.me)
+export(temp_plot)

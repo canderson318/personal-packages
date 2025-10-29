@@ -99,9 +99,9 @@ temp_plot <- "
 #'
 #' @param plot is a ggplot object
 #' @param path is where to save the plot
-#' @param width
-#' @param height
-#' @param dpi
+#' @param width width of plot
+#' @param height height of plot
+#' @param dpi pixel density
 #' @return save plot and print path where plot saved
 #' @export
 temp_plot <- function(plot, path = '/projects/canderson2@xsede.org/zhang-lab/cite-seq/analysis-versions/version002/cd4/results/temp-plot.png', width = 6, height = 4, dpi = 300) {
@@ -120,7 +120,8 @@ temp_plot <- function(plot, path = '/projects/canderson2@xsede.org/zhang-lab/cit
 functions <- list(
   memory_usage_summary=memory_usage_summary,
   notify.me=notify.me,
-  how.long=how.long
+  how.long=how.long,
+  temp_plot = temp_plot
   )
 
 # Write the function to an R script file
