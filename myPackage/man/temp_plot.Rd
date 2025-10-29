@@ -2,16 +2,9 @@
 % Please edit documentation in R/temp_plot.R
 \name{temp_plot}
 \alias{temp_plot}
-\title{Print time between first and second function call}
+\title{Save plot to quick directory}
 \usage{
-temp_plot(
-  plot,
-  path =
-    "/projects/canderson2@xsede.org/zhang-lab/cite-seq/analysis-versions/version002/cd4/results/temp-plot.png",
-  width = 6,
-  height = 4,
-  dpi = 300
-)
+temp_plot(plot, path = "~/temp-plot.png", width = 6, height = 4, dpi = 300)
 }
 \arguments{
 \item{plot}{is a ggplot object}
@@ -28,5 +21,5 @@ temp_plot(
 save plot and print path where plot saved
 }
 \description{
-Print time between first and second function call
+Save plot to quick directory
 }
