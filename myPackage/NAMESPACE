@@ -3,4 +3,5 @@
 export(how.long)
 export(memory_usage_summary)
 export(notify.me)
+export(setdiff_intersect)
 export(temp_plot)
