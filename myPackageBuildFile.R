@@ -142,6 +142,7 @@ setdiff_intersect <- "
 #' @return print counts (and values) of distinctions and intersections
 #' @export
   setdiff_intersect <- function(sets, labels = names(sets), values = FALSE) {
+    require(dplyr)
     if (length(sets) < 2 || length(sets) > 3) {
       stop('Only 2 or 3 sets are supported.')
     }
@@ -211,16 +212,16 @@ functions <- list(
   how.long=how.long,
   temp_plot = temp_plot,
   setdiff_intersect = setdiff_intersect
-  )
+)
 
-
-# Write the function to an R script file
-for(func_nm in names(functions)){
-  writeLines(functions[[func_nm]], con = sprintf("R/%s.R", func_nm))
+for(func_nm in names(functions)) {
+  fun_text <- functions[[func_nm]]
+  writeLines(fun_text, con = sprintf("R/%s.R", func_nm))
 }
 
+
 # Step 4: Document the package (generate NAMESPACE and Rd files)
-devtools::document()
+devtools::document(".")
 
 # Step 5: Add dependencies (optional)
 # usethis::use_package("dplyr")
