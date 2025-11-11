@@ -7,6 +7,7 @@
 #' @return print counts (and values) of distinctions and intersections
 #' @export
   setdiff_intersect <- function(sets, labels = names(sets), values = FALSE) {
+    require(dplyr)
     if (length(sets) < 2 || length(sets) > 3) {
       stop('Only 2 or 3 sets are supported.')
     }
